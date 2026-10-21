@@ -1,1 +1,85 @@
 @import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #fcf9f2;
+    color: #1c1c18;
+    overscroll-behavior: none;
+  }
+}
+
+.font-sans-ui {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+.font-mono-code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Handwriting Font Personas */
+.font-persona-aarav {
+  font-family: 'Caveat', cursive, sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.font-persona-elena {
+  font-family: 'Kalam', cursive, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.65rem;
+}
+
+.font-persona-marcus {
+  font-family: 'Architects Daughter', cursive, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.7rem;
+}
+
+.font-persona-devi {
+  font-family: 'Marck Script', cursive, sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.85rem;
+}
+
+.font-persona-custom {
+  font-family: 'Caveat', cursive, sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+/* Hide scrollbars cleanly */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Print Styles for Real Printable Output */
+@media print {
+  header, aside, footer, .canvas-toolbar, .thumbnail-strip, .screen-only {
+    display: none !important;
+  }
+  
+  body, main {
+    background: white !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .print-sheet {
+    page-break-after: always;
+    box-shadow: none !important;
+    transform: none !important;
+    margin: 0 auto !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    height: 100vh !important;
+  }
+
+  .pl-64 {
+    padding-left: 0 !important;
+  }
+}
